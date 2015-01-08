@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/primary_text</item>
     </style>
 
     <style name="text">
@@ -13,5 +13,16 @@
         <item name="android:inputType">numberDecimal</item>
         <item name="android:ems">10</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:layout_marginRight">100dp</item>
+        <item name="android:background">@drawable/inputbox</item>
+    </style>
+
+    <style name="subtitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/input_field_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">17sp</item>
     </style>
 </resources>
