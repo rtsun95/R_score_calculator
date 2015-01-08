@@ -1,27 +1,21 @@
-package com.example.sun.test_2;
+package com.example.ruotai.rscorecalculator;
 
 import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 
-public class MyActivity extends Activity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_main);
 
         final TextView average_input = getTextView(R.id.average_input);
         final TextView classaverage_input = getTextView(R.id.classaverage_input);
@@ -65,7 +59,7 @@ public class MyActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

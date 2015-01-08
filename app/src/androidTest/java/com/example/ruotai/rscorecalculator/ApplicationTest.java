@@ -1,4 +1,4 @@
-package com.example.sun.test_2;
+package com.example.ruotai.rscorecalculator;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
