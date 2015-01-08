@@ -6,4 +6,12 @@
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+
+    <style name="text">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/input_field_height</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>
