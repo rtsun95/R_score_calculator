@@ -1,8 +1,8 @@
 package com.example.ruotai.rscorecalculator;
 
-import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,12 +10,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
 
         final TextView average_input = getTextView(R.id.average_input);
         final TextView classaverage_input = getTextView(R.id.classaverage_input);
@@ -55,7 +61,6 @@ public class MainActivity extends Activity {
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -69,9 +74,12 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -93,8 +101,8 @@ public class MainActivity extends Activity {
     private float checkError(final TextView input){
         float number = getFloat(input);
         if(checkValue(number)) {
-            input.setTextSize(16);
-            ((EditText) input).setHint("Veuillez enter un nombre entre 0 et 100");
+            input.setTextSize(11);
+            ((EditText) input).setHint("Entrer un nombre valide");
             return (float) -1.0;
         }
         else return number;
